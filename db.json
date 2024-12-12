@@ -1,0 +1,53 @@
+{
+  "products": [
+    {
+      "name": "Robusta Temanggung",
+      "price": 700000,
+      "stock": "2",
+      "imageUrl": "https://agrotrusted.com/wp-content/uploads/2024/07/aaaaaa-removebg-preview.png",
+      "id": "1"
+    },
+    {
+      "name": "Arabica Mandheling G3",
+      "price": 600000,
+      "stock": "3",
+      "imageUrl": "https://agrotrusted.com/wp-content/uploads/2024/07/6-removebg-preview-1.png",
+      "id": "2"
+    },
+    {
+      "name": "Arabica Toraja G2",
+      "price": 450000,
+      "stock": "5",
+      "imageUrl": "https://agrotrusted.com/wp-content/uploads/2024/07/Toraja-G1.png",
+      "id": "3"
+    },
+    {
+      "name": "Arabica Gayo G3",
+      "price": 250000,
+      "stock": "7",
+      "imageUrl": "https://agrotrusted.com/wp-content/uploads/2024/11/gayo-3-300x295.png",
+      "id": "4"
+    },
+    {
+      "name": "Arabica Toraja G4",
+      "price": 550000,
+      "stock": 10,
+      "imageUrl": "https://agrotrusted.com/wp-content/uploads/2024/11/wine-300x278.png",
+      "id": "5"
+    },
+    {
+      "name": "Robusta Lampung G1",
+      "price": 850000,
+      "stock": "20",
+      "imageUrl": "https://agrotrusted.com/wp-content/uploads/2024/11/wine-300x278.png",
+      "id": "7"
+    },
+    {
+      "name": "Arabica Wine Process",
+      "price": 740000,
+      "stock": "16",
+      "imageUrl": "https://agrotrusted.com/wp-content/uploads/2024/11/wine-300x278.png",
+      "id": "9"
+    }
+  ]
+}
