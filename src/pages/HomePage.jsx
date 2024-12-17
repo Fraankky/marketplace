@@ -1,7 +1,6 @@
 import { ProductCard } from "../components/ProductCard";
 import { axiosInstance } from "@/lib/axios";
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
 
 // const productsRaw = [
 //   {
@@ -31,9 +30,6 @@ const HomePage = () => {
   const [products, setProducts] = useState([]);
   const [productIsLoading, setProductIsLoading] = useState(false);
 
-  const userSelector = useSelector((state) => state.user);
-  const counterSelector = useSelector((state) => state.counter);
-
   const productsList = products.map((product, index) => {
     return (
       <ProductCard
@@ -53,7 +49,7 @@ const HomePage = () => {
     setProductIsLoading(true);
     try {
       const response = await axiosInstance.get("/products");
-      console.log(response.data);
+
       setProducts(response.data);
     } catch (err) {
       console.log(err);
@@ -71,12 +67,11 @@ const HomePage = () => {
       <main className="mi n-h-[80vh] max-w-screen-md mx-auto px-4 mt-8">
         <div className="pb-20 mx-auto text-center flex flex-col items-center max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Purchase product from trusted product! {userSelector.username}
+            Purchase product from trusted product!
           </h1>
           <p className="mt-6 text-lg max-w-prose text-muted-foreground">
             We are your food supply solution
           </p>
-          <p>Counter: {counterSelector.count}</p>
         </div>
         {productIsLoading ? (
           <p>Loading...</p>

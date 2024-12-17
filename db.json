@@ -49,5 +49,42 @@
       "imageUrl": "https://agrotrusted.com/wp-content/uploads/2024/11/wine-300x278.png",
       "id": "9"
     }
+  ],
+  "users": [
+    {
+      "id": "56f1",
+      "username": "franky",
+      "password": "bismillah",
+      "role": "user"
+    },
+    {
+      "id": "d6d3",
+      "username": "admin",
+      "password": "password",
+      "role": "admin"
+    }
+  ],
+  "carts": [
+    {
+      "userId": "d6d3",
+      "productId": "1",
+      "quantity": 2,
+      "id": "1"
+    },
+    {
+      "id": "c11b",
+      "productId": "7",
+      "quantity": 1
+    },
+    {
+      "id": "c6b7",
+      "productId": "2",
+      "quantity": 2
+    },
+    {
+      "id": "4",
+      "productId": "4",
+      "quantity": 4
+    }
   ]
 }

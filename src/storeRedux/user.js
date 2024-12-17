@@ -1,9 +1,21 @@
 const DEFAULT_STATE = {
-  username: "messi",
-  email: "user@emailku.com",
-  id: 10,
+  username: "",
+  email: "",
+  role: "",
 };
 
 export const userReducer = (state = DEFAULT_STATE, action) => {
+  if (action.type === "USER_LOGIN") {
+    const dupState = { ...state };
+
+    dupState.username = action.payload.username;
+    dupState.id = action.payload.id;
+    dupState.role = action.payload.role;
+
+    return dupState;
+  } else if (action.type === "USER_LOGOUT") {
+    return DEFAULT_STATE;
+  }
+
   return state;
 };
