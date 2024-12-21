@@ -66,25 +66,22 @@
   ],
   "carts": [
     {
-      "userId": "d6d3",
+      "id": "d259",
+      "userId": "56f1",
       "productId": "1",
-      "quantity": 2,
-      "id": "1"
-    },
-    {
-      "id": "c11b",
-      "productId": "7",
-      "quantity": 1
-    },
-    {
-      "id": "c6b7",
-      "productId": "2",
       "quantity": 2
     },
     {
-      "id": "4",
-      "productId": "4",
-      "quantity": 4
+      "id": "de2f",
+      "userId": "56f1",
+      "productId": "3",
+      "quantity": 2
+    },
+    {
+      "id": "c4dc",
+      "userId": "56f1",
+      "productId": "2",
+      "quantity": 2
     }
   ]
 }

@@ -4,10 +4,13 @@ import { IoCart, IoHeart } from "react-icons/io5";
 import { Separator } from "./ui/separator";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { axiosInstance } from "@/lib/axios";
+import { useEffect } from "react";
 
 export const Header = () => {
   const dispatch = useDispatch();
   const userSelector = useSelector((state) => state.user);
+  const cartSelector = useSelector((state) => state.cart);
 
   const handleLogout = () => {
     // 1. remove local storage
@@ -17,6 +20,28 @@ export const Header = () => {
       type: "USER_LOGOUT",
     });
   };
+
+  const fetchCart = async () => {
+    try {
+      const cartResponse = await axiosInstance.get("/carts", {
+        params: {
+          userId: userSelector.id,
+          _embed: "product",
+        },
+      });
+
+      dispatch({
+        type: "CART_GET",
+        payload: cartResponse.data,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchCart();
+  }, []);
 
   return (
     <header className="h-20 flex items-center border-b justify-between px-8">
@@ -37,6 +62,9 @@ export const Header = () => {
             <Link to="/cart">
               <Button size="icon" variant="ghost">
                 <IoCart className="h-8 w-8" />
+                <span className="text-lg font-sm">
+                  {cartSelector.items.length}
+                </span>
               </Button>
             </Link>
           </>
