@@ -32,7 +32,6 @@ function App() {
         <Route path="/login" Component={LoginPage} />
         <Route path="/register" Component={RegisterPage} />
         <Route path="/product/:productId" Component={ProductDetailPage} />
-        <Route path="/counter" Component={CounterPage}></Route>
 
         <Route path="/admin">
           <Route path="products" Component={ProductManagementPage} />
